@@ -9,6 +9,7 @@ from . import image
 from . import labels
 from . import math
 from . import metadata
+from . import flattening
 # from . import moco # FIXME
 from . import process_seg
 from . import resampling

@@ -1,12 +1,10 @@
 
-import sys, os
+import multiprocessing
 from tempfile import TemporaryDirectory
+
 import pytest
 
-import multiprocessing
-
 from spinalcordtoolbox.utils import sct_test_path, sct_dir_local_path
-sys.path.append(sct_dir_local_path('scripts'))
 from spinalcordtoolbox import resampling
 import spinalcordtoolbox.reports.qc as qc
 from spinalcordtoolbox.image import Image

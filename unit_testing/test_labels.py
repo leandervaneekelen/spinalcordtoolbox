@@ -3,16 +3,15 @@
 # pytest unit tests for spinalcordtoolbox.labels
 
 import logging
-from time import time
 
-import numpy as np
 import pytest
 
 import spinalcordtoolbox.labels as sct_labels
 from spinalcordtoolbox.image import Image, zeros_like
 from spinalcordtoolbox.utils import sct_test_path
 from spinalcordtoolbox.types import Coordinate
-from test_image import fake_3dimage, fake_3dimage2
+
+from .test_image import fake_3dimage, fake_3dimage2
 
 logger = logging.getLogger(__name__)
 

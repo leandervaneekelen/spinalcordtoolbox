@@ -15,8 +15,6 @@ from spinalcordtoolbox.testing.create_test_data import dummy_centerline
 import spinalcordtoolbox.math
 from spinalcordtoolbox.utils import sct_test_path, init_sct
 
-sys.path.append(os.path.join(__sct_dir__, 'scripts'))
-
 
 init_sct(log_level=2)  # Set logger in debug mode
 VERBOSE = 0  # Set to 2 to save images, 0 otherwise
@@ -25,12 +23,12 @@ VERBOSE = 0  # Set to 2 to save images, 0 otherwise
 # Generate a list of fake centerlines: (dummy_segmentation(params), dict of expected results)
 im_ctl_find_and_sort_coord = [
     (dummy_centerline(size_arr=(41, 7, 9), subsampling=1, orientation='LPI'), None),
-    ]
+]
 
 im_ctl_zeroslice = [
     (dummy_centerline(size_arr=(15, 7, 9), zeroslice=[0, 1], orientation='LPI'), (3, 7)),
     (dummy_centerline(size_arr=(15, 7, 9), zeroslice=[], orientation='LPI'), (3, 9)),
-    ]
+]
 
 im_centerlines = [
     (dummy_centerline(size_arr=(41, 7, 9), subsampling=1, orientation='SAL'),
@@ -174,4 +172,4 @@ def test_get_centerline_optic(params):
 
 def test_round_and_clip():
     arr = round_and_clip(np.array([-0.2, 3.00001, 2.99999, 49]), clip=[0, 41])
-    assert np.all(arr == np.array([0,  3,  3, 40]))  # Check element-wise equality between the two arrays
+    assert np.all(arr == np.array([0, 3, 3, 40]))  # Check element-wise equality between the two arrays

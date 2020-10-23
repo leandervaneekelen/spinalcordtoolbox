@@ -14,7 +14,6 @@ import numpy as np
 import nibabel as nib
 
 from spinalcordtoolbox import __sct_dir__, __version__
-sys.path.append(os.path.join(__sct_dir__, 'scripts'))
 
 from spinalcordtoolbox import aggregate_slicewise
 from spinalcordtoolbox.process_seg import Metric

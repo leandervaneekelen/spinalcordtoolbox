@@ -13,7 +13,7 @@ from . import metadata
 from . import flattening
 from . import process_seg
 from . import resampling
-from . import straighteningq
+from . import straightening
 from . import template
 from . import types
 

@@ -10,7 +10,7 @@ import nibabel.orientations
 
 import spinalcordtoolbox.image as msct_image
 
-from .scripts import sct_apply_transfo
+from spinalcordtoolbox.scripts import sct_apply_transfo
 
 
 def fake_image_custom(data):

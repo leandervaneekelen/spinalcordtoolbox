@@ -3,7 +3,7 @@ from textwrap import dedent
 
 import pytest
 
-from .scripts import sct_run_batch
+from spinalcordtoolbox.scripts import sct_run_batch
 
 
 def test_config_with_args_warning():

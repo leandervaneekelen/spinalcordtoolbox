@@ -12,8 +12,7 @@ import nibabel.orientations
 
 import spinalcordtoolbox.image as msct_image
 from spinalcordtoolbox.utils import tmp_create, __sct_dir__
-
-from .scripts import sct_image
+from spinalcordtoolbox.scripts import sct_image
 
 
 @pytest.fixture(scope="session")
